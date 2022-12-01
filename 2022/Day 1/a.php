@@ -2,7 +2,7 @@
 
 $file = file_get_contents('./elfCalories.txt');
 
-$elfArray = explode(PHP_EOL,$file);
+$elfArray = explode(PHP_EOL, $file);
 
 $elfCount = [];
 
@@ -12,7 +12,8 @@ foreach ($elfArray as $elf) {
         $elfCount[] = $count;
         $count = 0;
     } else {
-    $count += $elf;    }
+        $count += $elf;
+    }
 }
 
 echo max($elfCount);
